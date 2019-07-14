@@ -1,0 +1,20 @@
+{
+  "name": "colorizerjs",
+  "version": "1.0.0",
+  "description": "Combine three grey scale images into one colorful image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/life777/colorizerjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/life777/colorizerjs/issues"
+  },
+  "homepage": "https://github.com/life777/colorizerjs#readme"
+}
