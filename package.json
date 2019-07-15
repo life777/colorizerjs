@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/life777/colorizerjs/issues"
   },
-  "homepage": "https://github.com/life777/colorizerjs#readme"
+  "homepage": "https://github.com/life777/colorizerjs#readme",
+  "devDependencies": {
+    "jpeg-js": "^0.3.5"
+  }
 }
