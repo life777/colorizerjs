@@ -1,26 +1,12 @@
 const path = require("path");
 const jpeg = require("jpeg-js");
 const getFiles = require("./getFiles");
+const createPremutations = require("../utils/premutations");
 const util = require("util");
 const fs = require("fs");
 const writeFile = util.promisify(fs.writeFile);
 
 let folder = process.argv[2];
-
-const createCombinations = elts => {
-    if (elts.length === 1) {
-        return [elts];
-    }
-
-    return elts.reduce((akk, elt, index, arr) => {
-        return akk.concat(
-            createCombinations([
-                ...arr.slice(0, index),
-                ...arr.slice(index + 1)
-            ]).map(subArr => [elt, ...subArr])
-        );
-    }, []);
-};
 
 const genereateColorfulFile = ([r, g, b]) => {
     let len = r.data.byteLength;
@@ -42,7 +28,7 @@ const genereateColorfulFile = ([r, g, b]) => {
 (async function () {
     let rgbFiles = await getFiles(path.join(__dirname, folder));
 
-    let combinations = createCombinations(rgbFiles);
+    let combinations = createPremutations(rgbFiles);
     let files = combinations.map(genereateColorfulFile);
 
     await Promise.all(
