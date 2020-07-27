@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/life777/colorizerjs#readme",
   "devDependencies": {
-    "jpeg-js": "^0.3.5"
+    "jpeg-js": "^0.4.0"
   }
 }
